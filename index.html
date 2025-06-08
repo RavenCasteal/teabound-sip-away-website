@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Sip n Dip - Premium Milk Tea Delivery</title>
+    <meta name="description" content="Order premium milk tea, boba tea, and fruit teas online with Sip n Dip. Fast delivery, fresh ingredients, and customizable options." />
+    <meta name="author" content="Sip n Dip" />
+    <meta name="keywords" content="milk tea, boba tea, bubble tea, fruit tea, tea delivery, premium tea" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:," />
+    <link rel="shortcut icon" href="data:," />
+    <link rel="icon" type="image/x-icon" href="data:," />
+    <link rel="icon" type="image/png" href="data:," />
+    <link rel="icon" type="image/svg+xml" href="data:," />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sip n Dip" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Sip n Dip - Premium Milk Tea Delivery" />
+    <meta property="og:description" content="Order premium milk tea, boba tea, and fruit teas online with Sip n Dip. Fast delivery, fresh ingredients, and customizable options." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3" />
+    <meta property="og:url" content="https://sipndip.com" />
+    <meta property="og:site_name" content="Sip n Dip" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sipndip" />
+    <meta name="twitter:title" content="Sip n Dip - Premium Milk Tea Delivery" />
+    <meta name="twitter:description" content="Order premium milk tea, boba tea, and fruit teas online with Sip n Dip. Fast delivery, fresh ingredients, and customizable options." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Performance optimization -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

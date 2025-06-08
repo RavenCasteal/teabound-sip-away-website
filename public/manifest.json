@@ -1,0 +1,9 @@
+{
+  "name": "Sip n Dip - Premium Milk Tea Delivery",
+  "short_name": "Sip n Dip",
+  "description": "Order premium milk tea, boba tea, and fruit teas online",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+} 
